@@ -1,0 +1,197 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Verified Profiles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden; /* Prevents unwanted scrolling during animation */
+        }
+
+        /* Animation for the Meta Logo */
+        @keyframes fadeInMove {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px); /* Starts slightly above */
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0); /* Ends at its normal position */
+            }
+        }
+
+        .meta-logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 80px; /* Adjust logo size */
+            animation: fadeInMove 1.5s ease-out; /* Animation for 1.5 seconds */
+        }
+
+        .verified-section {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            max-width: 500px; /* Wider for laptops */
+            width: 100%;
+            text-align: left;
+            box-sizing: border-box;
+            animation: fadeInMove 1s ease-out; /* Same animation for verified section */
+            animation-delay: 0.5s; /* Starts after the logo animation */
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 10px; /* Improved spacing between image and text */
+        }
+
+        .blue-tick-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .verified-icon {
+            width: 40px;  /* Slightly larger for better visibility */
+            height: 40px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+        }
+
+        .description {
+            font-size: 16px; /* Fixed size for better readability */
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.5; /* Improved line spacing */
+        }
+
+        .get-badge-btn,
+        .learn-more-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            font-size: 16px; /* Slightly larger font */
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .get-badge-btn {
+            background-color: #0078ff;
+            color: #fff;
+            border: none;
+        }
+
+        .get-badge-btn:hover {
+            background-color: #005bb5;
+        }
+
+        .learn-more-btn {
+            background-color: #f0f2f5;
+            color: #0078ff;
+            border: 1px solid #0078ff;
+        }
+
+        .learn-more-btn:hover {
+            background-color: #dbe5f4;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .verified-section {
+                padding: 20px;
+                max-width: 90%;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            .description {
+                font-size: 14px;
+            }
+
+            .get-badge-btn,
+            .learn-more-btn {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 18px;
+            }
+
+            .description {
+                font-size: 13px;
+            }
+
+            .get-badge-btn,
+            .learn-more-btn {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Meta Logo -->
+    <img 
+        src="https://scontent.fkhi20-1.fna.fbcdn.net/v/t39.8562-6/252294889_575082167077436_6034106545912333281_n.svg/meta-logo-primary_standardsize.svg?_nc_cat=1&ccb=1-7&_nc_sid=e280be&_nc_ohc=oZ2m0wuy5_EQ7kNvgG_mogV&_nc_zt=14&_nc_ht=scontent.fkhi20-1.fna&_nc_gid=ARq_aUV4O6OJyoh40XA-Kbz&oh=00_AYDda0wqlQoswJbWO6JOqDeDL9mqZoAqmaispq9zVxPzxg&oe=67580079" 
+        alt="Meta Logo" 
+        class="meta-logo" 
+        onerror="this.style.display='none';">
+    
+    <div class="verified-section">
+        <!-- Header with Blue Tick Image on the Left of the Text -->
+        <div class="header">
+            <div class="blue-tick-wrapper">
+                <img src="https://cdn.glitch.global/4039d603-5a90-4ef3-9189-30cc04ca2033/WhatsApp%20Image%202024-12-06%20at%204.40.14%20AM.jpeg?v=1733442083049" 
+                     alt="Blue Tick" 
+                     class="verified-icon">
+            </div>
+        </div>
+        <h1>About Meta Verified Profiles</h1>
+        <div class="description">
+            Profiles can be verified by Meta, based on their activity across Meta products or documents they provide. Verified badges are displayed on these profiles. Some verified profiles are owned by a notable person, brand, or entity, while others subscribe to Meta Verified.
+        </div>
+
+        <button class="get-badge-btn" id="getBadgeBtn">Get a Verified badge</button>
+        <button class="learn-more-btn" id="learnMoreBtn">Learn More</button>
+    </div>
+
+    <footer style="text-align: center; margin-top: 20px; font-size: 12px; color: #888;">
+      
+    </footer>
+
+    <script>
+        document.getElementById('getBadgeBtn').addEventListener('click', function() {
+            window.location.href = 'request.html'; // Replace with actual link
+        });
+
+        document.getElementById('learnMoreBtn').addEventListener('click', function() {
+            window.location.href = 'https://transparency.meta.com/en-gb/'; // Replace with actual link
+        });
+    </script>
+</body>
+</html>
